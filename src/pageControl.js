@@ -20,6 +20,19 @@ export const pageControl = (function(){
     header.appendChild(contact);
 
     content.appendChild(header);
+
+    //styling elements
+    header.style.display = "flex";
+    header.style.justifyContent = "center";
+    header.style.alignItems = "center";
+    header.style.height = "50px";
+    header.style.width = "100%";
+
+    [home, menu, contact].forEach((headerElement) => {
+      headerElement.style.paddingLeft = "10px";
+      headerElement.style.paddingRight = "10px";
+      headerElement.style.cursor = "pointer";
+    })
   }
 
   return {
