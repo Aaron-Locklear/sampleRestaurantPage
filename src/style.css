@@ -9,10 +9,6 @@ body{
   width: 100%;
 }
 
-#home{
-  border-bottom: solid red 2px;
-}
-
 #body{
   padding:25px;
   display: grid;
