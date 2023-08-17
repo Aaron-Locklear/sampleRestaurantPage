@@ -41,6 +41,10 @@ export const pageControl = (function(){
     home.addEventListener("click", ()=>{
       loadHome();
     })
+
+    menu.addEventListener("click", ()=>{
+      loadMenu();
+    })
   }
 
   function loadHome(){
@@ -70,6 +74,45 @@ export const pageControl = (function(){
     document.querySelector("#home").style.borderBottom = "solid red 2px";
     document.querySelector("#menu").style.border = "none";
     document.querySelector("#contact").style.border = "none";
+  }
+
+  function loadMenu(){
+    document.querySelector("#home").style.border = "none";
+    document.querySelector("#menu").style.borderBottom = "solid red 2px";
+    document.querySelector("#contact").style.border = "none";
+
+    content.removeChild(document.querySelector("#body"));
+
+    const contentBody = document.createElement("div");
+    contentBody.setAttribute("id","body");
+    document.querySelector("#content").appendChild(contentBody);
+
+    const appetizer = document.createElement("ul");
+    appetizer.style.listStyleType = "none";
+    ["Appetizers:","Monochrome Mango Salad: $9.99","Zen Garden Sushi Roll: $12.50","Pixelated Pasta Bites: $8.75"].forEach((item) =>{
+      const listItem = document.createElement("li");
+      listItem.innerHTML = item;
+      appetizer.appendChild(listItem);
+    })
+    contentBody.appendChild(appetizer);
+
+    const mainCourse = document.createElement("ul");
+    mainCourse.style.listStyleType = "none";
+    ["Main Courses:","Essence of Earth Bowl: $14.50","Tranquil Tofu Tacos: $11.25","Symphony of Simple Soups: $7.99"].forEach((item) =>{
+      const listItem = document.createElement("li");
+      listItem.innerHTML = item;
+      mainCourse.appendChild(listItem);
+    })
+    contentBody.appendChild(mainCourse);
+
+    const desserts = document.createElement("ul");
+    desserts.style.listStyleType = "none";
+    ["Desserts:","Mindful Matcha Parfait: $6.99","Minimalist Macarons (Set of 3): $8.50","Wholesome Walnut Brownie: $5.25"].forEach((item) =>{
+      const listItem = document.createElement("li");
+      listItem.innerHTML = item;
+      desserts.appendChild(listItem);
+    })
+    contentBody.appendChild(desserts);
   }
 
   return {

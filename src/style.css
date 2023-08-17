@@ -16,7 +16,7 @@ body{
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-#body > p, #body > h1{
+#body > p, #body > h1, #body > ul{
   grid-column: 2 / 3;
   text-align: center;
   padding: 20px;
