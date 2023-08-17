@@ -1,2 +1,7 @@
 import './style.css';
-import "./pageControl";
+import "./pageControl.js";
+import { pageControl } from './pageControl.js';
+
+const setUp = (function(){
+  pageControl.loadBase();
+})();
