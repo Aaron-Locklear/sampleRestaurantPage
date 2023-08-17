@@ -38,6 +38,8 @@ export const pageControl = (function(){
       headerElement.style.userSelect = "none";
     })
 
+    loadHome();
+
     home.addEventListener("click", ()=>{
       loadHome();
     })
@@ -151,6 +153,5 @@ export const pageControl = (function(){
 
   return {
     loadBase,
-    loadHome,
   }
 })();
