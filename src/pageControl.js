@@ -45,6 +45,10 @@ export const pageControl = (function(){
     menu.addEventListener("click", ()=>{
       loadMenu();
     })
+
+    contact.addEventListener("click", ()=>{
+      loadContact();
+    })
   }
 
   function loadHome(){
@@ -113,6 +117,36 @@ export const pageControl = (function(){
       desserts.appendChild(listItem);
     })
     contentBody.appendChild(desserts);
+  }
+
+  function loadContact(){
+    document.querySelector("#home").style.border = "none";
+    document.querySelector("#menu").style.border = "none";
+    document.querySelector("#contact").style.borderBottom = "solid red 2px";
+
+    content.removeChild(document.querySelector("#body"));
+
+    const contentBody = document.createElement("div");
+    contentBody.setAttribute("id","body");
+    document.querySelector("#content").appendChild(contentBody);
+
+    const address = document.createElement("p");
+    address.innerHTML = "Address : 123 Serenity Street, Minimont City, NM 54321";
+
+    const phone = document.createElement("p");
+    phone.innerHTML = "Phone : (555) 123-4567";
+
+    const email = document.createElement("p");
+    email.innerHTML = "Email : info@pixelpalate.com";
+
+    const social = document.createElement("p");
+    social.innerHTML = "Instagram : @PixelPalate";
+
+    contentBody.appendChild(address);
+    contentBody.appendChild(address);
+    contentBody.appendChild(phone);
+    contentBody.appendChild(email);
+    contentBody.appendChild(social);
   }
 
   return {
