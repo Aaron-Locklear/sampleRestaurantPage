@@ -1,0 +1,23 @@
+{
+  "name": "samplerestaurantpage",
+  "version": "1.0.0",
+  "description": "This is a project to practice using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Aaron-Locklear/sampleRestaurantPage.git"
+  },
+  "author": "Aaron Locklear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaron-Locklear/sampleRestaurantPage/issues"
+  },
+  "homepage": "https://github.com/Aaron-Locklear/sampleRestaurantPage#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
