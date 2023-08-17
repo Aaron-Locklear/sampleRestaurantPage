@@ -2,6 +2,7 @@ body{
   width: 100vw;
   height: 100vh;
   background-color: ivory;
+  color:#DD7230;
 }
 
 #content{
@@ -12,16 +13,30 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0px;
-  left: 0px;
   height: 50px;
   width:100%;
-  color:#DD7230;
 }
 
 #header > div{
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
+}
+
+#home{
+  border-bottom: solid red 2px;
+}
+
+#body{
+  padding:25px;
+  display: grid;
+  gap:25px;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#body > p{
+  grid-column: 2 / 3;
+  text-align: center;
+  padding: 20px;
+  border: solid red 2px;
 }
